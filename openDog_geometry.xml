@@ -1,0 +1,53 @@
+<robot name = "openDog">
+
+	<material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+    <material name="red">
+        <color rgba="0.8 0 0 1"/>
+    </material>
+    <material name="green">
+        <color rgba="0 0.8 0 1"/>
+    </material>
+    <material name="grey">
+        <color rgba="0.75 0.75 0.75 1"/>
+    </material>
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+	<link name = "lower_extrusion">
+		<visual>
+			<origin xyz = "0 0 0" rpy = "0 0 0"/>
+			<geometry>
+			 	<box "0.02 0.04 0.58"/>
+			</geometry>
+			<material name = "grey"/>
+		</visual>
+	</link>
+
+	<link name = "upper_extrusion">
+		<visual>
+			<origin xyz = "0 0 0" rpy = "0 0 0"/>
+			<geometry>
+				<box "0.02 0.06 0.8" rpy = "0 0 0"/>
+				<material name = "grey"/>
+		</visual>
+	<link/>
+
+	<joint name = "knee_joint" type = "revolute">
+		<parent link = "lower_extrusion"/>
+		<child link = "upper_extrusion"/>
+		<geometry>
+			<cylinder radius = "0.01" length = "0.09"/>
+		<geometry/>
+
+	<joint/>
+
+
+
+
+</robot>
