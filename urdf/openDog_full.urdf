@@ -377,7 +377,11 @@
     </inertial>
 	</link>
 	
-
+	<joint name = "body_mass_joint" type = "fixed">
+		<parent link = "openDog_body"/>
+		<child link  = "body_mass"/>
+		<origin xyz = "0 0 0" rpy = "0 0 0"/>
+	</joint>
 	
 	<!-- Hip joint links body and aluminum tube -->
 	<joint name="hip_joint_1" type="fixed">
