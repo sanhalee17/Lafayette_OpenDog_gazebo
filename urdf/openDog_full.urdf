@@ -411,7 +411,7 @@
         <parent link="hip_tube_1"/>
         <child link="upper_extrusion_leg1"/>
         <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="0" upper="0.44" effort="0.1" velocity="0.005"/>
+        <limit lower="0.567" upper="1.579" effort="10" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -420,7 +420,7 @@
         <parent link="hip_tube_2"/>
         <child link="upper_extrusion_leg2"/>
         <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="0" upper="0.44" effort="0.1" velocity="0.005"/>
+        <limit lower="0.567" upper="1.579" effort="10" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -428,7 +428,7 @@
         <parent link="hip_tube_3"/>
         <child link="upper_extrusion_leg3"/>
         <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="0" upper="0.44" effort="0.1" velocity="0.005"/>
+        <limit lower="0.567" upper="1.579" effort="10" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -436,7 +436,7 @@
         <parent link="hip_tube_4"/>
         <child link="upper_extrusion_leg4"/>
         <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="0" upper="0.44" effort="0.1" velocity="0.005"/>
+        <limit lower="0.567" upper="1.579" effort="10" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -445,7 +445,7 @@
         <child link = "lower_extrusion_leg1"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
         
-        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
         <axis xyz="0 0 1"/>
         
     </joint>
@@ -454,7 +454,7 @@
         <parent link = "upper_extrusion_leg2"/>
         <child link = "lower_extrusion_leg2"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
-        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
         <axis xyz="0 0 1"/>
         
     </joint>
@@ -463,7 +463,7 @@
         <parent link = "upper_extrusion_leg3"/>
         <child link = "lower_extrusion_leg3"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
-        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -471,8 +471,8 @@
         <parent link = "upper_extrusion_leg4"/>
         <child link = "lower_extrusion_leg4"/>
         <origin xyz="0 0.39 0" rpy="0 0 0 "/>
-        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
-        <axis xyz="0 1 0"/>
+        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
 	
