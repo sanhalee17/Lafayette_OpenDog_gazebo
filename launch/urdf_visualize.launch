@@ -1,7 +1,7 @@
 <launch>
 
-  <!-- USE: roslaunch my_mira_description urdf_visualize.launch model:='$(find myrobot_package)/urdf/myrobot.urdf' -->
-  <arg name="model" default=""/>
+  
+  <arg name="model" default="$(find openDog_description)/urdf/openDog_full.urdf"/>
 
 
   <param name="robot_description" command="cat $(arg model)" />
