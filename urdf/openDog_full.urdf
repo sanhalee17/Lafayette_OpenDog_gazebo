@@ -57,9 +57,9 @@
     	<visual>
     		<origin xyz = "0 0 0" rpy = "0 0 0"/>
     		<geometry>
-    			<box size = "0.5 0.5 0.5 "/>
+    			<box size = "0.3 0.3 0.3 "/>
     		</geometry>
-    		<material name = "silver"/>
+    		<material name = "black"/>
     	</visual>
     	<collision>
     		<origin xyz = "0 0 0" rpy = "0 0 0"/>
