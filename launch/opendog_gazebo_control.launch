@@ -20,6 +20,6 @@
   </include>
 
   <!-- Spawn a robot into Gazebo -->
-<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find openDog_description)/urdf/openDog_full.urdf -urdf -z 1 -model openDog_full" />
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find openDog_description)/urdf/openDog_full.urdf -urdf -z .3 -model openDog_full" />
 
 </launch>

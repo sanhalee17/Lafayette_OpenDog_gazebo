@@ -419,11 +419,11 @@
         <parent link="hip_tube_1"/>
         <child link="upper_extrusion_leg1"/>
         <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.567" effort="10" velocity="10"/>
+        <limit lower="-1.579" upper="-0.567" effort="5000" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans0">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="femur_joint1">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -439,11 +439,11 @@
         <parent link="hip_tube_2"/>
         <child link="upper_extrusion_leg2"/>
         <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.567" effort="10" velocity="10"/>
+        <limit lower="-1.579" upper="-0.567" effort="5000" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans1">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="femur_joint2">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -458,11 +458,11 @@
         <parent link="hip_tube_3"/>
         <child link="upper_extrusion_leg3"/>
         <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.567" effort="10" velocity="10"/>
+        <limit lower="-1.579" upper="-0.567" effort="5000" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans2">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="femur_joint3">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -477,11 +477,11 @@
         <parent link="hip_tube_4"/>
         <child link="upper_extrusion_leg4"/>
         <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.567" effort="10" velocity="10"/>
+        <limit lower="-1.579" upper="-0.567" effort="5000" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans3">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="femur_joint4">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -497,12 +497,12 @@
         <child link = "lower_extrusion_leg1"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
         
-        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
+        <limit effort="5000"  lower="1.352" upper="2.8715" velocity="1.0"/>
         <axis xyz="0 0 1"/>
         
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans4">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="knee_joint_leg1">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -517,12 +517,12 @@
         <parent link = "upper_extrusion_leg2"/>
         <child link = "lower_extrusion_leg2"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
-        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
+        <limit effort="5000"  lower="1.352" upper="2.8715" velocity="1.0"/>
         <axis xyz="0 0 1"/>
         
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans5">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="knee_joint_leg2">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -537,11 +537,11 @@
         <parent link = "upper_extrusion_leg3"/>
         <child link = "lower_extrusion_leg3"/>
         <origin xyz="0 0.39 0" rpy="0 0 0"/>
-        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
+        <limit effort="5000"  lower="1.352" upper="2.8715" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans6">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="knee_joint_leg3">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -558,11 +558,11 @@
         <parent link = "upper_extrusion_leg4"/>
         <child link = "lower_extrusion_leg4"/>
         <origin xyz="0 0.39 0" rpy="0 0 0 "/>
-        <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
+        <limit effort="5000"  lower="1.352" upper="2.8715" velocity="1.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
-    <transmission name="simple_trans">
+    <transmission name="simple_trans7">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="knee_joint_leg4">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
