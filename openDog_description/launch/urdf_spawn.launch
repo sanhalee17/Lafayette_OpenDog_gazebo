@@ -1,8 +1,8 @@
 <launch>
 
   <!-- USE: roslaunch my_mira_description urdf_visualize.launch model:='$(find myrobot_package)/urdf/myrobot.urdf' -->
+  <arg name="model" default=""/>
 
-  <arg name="model" default="$(find openDog_description)/urdf/openDog_full.urdf"/>
 
   <param name="robot_description" command="cat $(arg model)" />
 
@@ -14,6 +14,10 @@
   
   <!-- Combine joint values -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- Show in Rviz   -->
+  <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_mira_description)/rviz_config/urdf.rviz"/>-->
+  <node name="rviz" pkg="rviz" type="rviz" args=""/>
 
 <!-- launch gazebo world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
