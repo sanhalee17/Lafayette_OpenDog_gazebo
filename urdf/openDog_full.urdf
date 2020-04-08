@@ -415,6 +415,17 @@
         <axis xyz="0 0 1"/>
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="femur_joint1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_1">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
 
     <joint name="femur_joint2" type="revolute">
         <parent link="hip_tube_2"/>
@@ -424,6 +435,17 @@
         <axis xyz="0 0 1"/>
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="femur_joint2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_2">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name="femur_joint3" type="revolute">
         <parent link="hip_tube_3"/>
         <child link="upper_extrusion_leg3"/>
@@ -432,6 +454,17 @@
         <axis xyz="0 0 1"/>
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="femur_joint3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_3">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name="femur_joint4" type="revolute">
         <parent link="hip_tube_4"/>
         <child link="upper_extrusion_leg4"/>
@@ -439,6 +472,17 @@
         <limit lower="-0.567" upper="-1.579" effort="10" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
+
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="femur_joint4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_4">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
 
     <joint name = "knee_joint_leg1" type = "revolute">
         <parent link = "upper_extrusion_leg1"/>
@@ -450,6 +494,17 @@
         
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="knee_joint_leg1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_5">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name = "knee_joint_leg2" type = "revolute">
         <parent link = "upper_extrusion_leg2"/>
         <child link = "lower_extrusion_leg2"/>
@@ -459,6 +514,17 @@
         
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="knee_joint_leg2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_6">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name = "knee_joint_leg3" type = "revolute">
         <parent link = "upper_extrusion_leg3"/>
         <child link = "lower_extrusion_leg3"/>
@@ -467,6 +533,19 @@
         <axis xyz="0 0 1"/>
     </joint>
 
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="knee_joint_leg3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_7">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
+
+
     <joint name = "knee_joint_leg4" type = "revolute">
         <parent link = "upper_extrusion_leg4"/>
         <child link = "lower_extrusion_leg4"/>
@@ -474,6 +553,17 @@
         <limit effort="10"  lower="1.352" upper="2.8715" velocity="10"/>
         <axis xyz="0 0 1"/>
     </joint>
+
+    <transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="knee_joint_leg4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_8">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
 
 	
 </robot>
