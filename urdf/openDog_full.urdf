@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<robot name = "openDog">
+<robot name = "opendog">
 
 
 <!-- gazebo plugins go here -->
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/openDog</robotNamespace>
+            <robotNamespace>/opendog</robotNamespace>
         </plugin>
     </gazebo>
 
