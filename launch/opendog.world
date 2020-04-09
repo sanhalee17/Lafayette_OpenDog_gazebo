@@ -17,11 +17,11 @@
     </include> -->
   </world>
 
-  <physics type='ode'>
+  <!-- <physics type='ode'>
       <max_step_size>0.01</max_step_size>
-      <real_time_factor>.5</real_time_factor>
+      <real_time_factor>.5</real_time_factor> -->
 <!--       <real_time_update_rate>10000</real_time_update_rate>
- -->      <gravity>0 0 -9.8</gravity>
+ -->      <!-- <gravity>0 0 -9.8</gravity>
       <ode>
         <solver>
           <type>quick</type>
@@ -34,5 +34,5 @@
 
         </constraints>
       </ode>
-  </physics>
+  </physics> -->
 </sdf>
