@@ -16,4 +16,23 @@
       <uri>model://MYROBOT_description</uri>
     </include> -->
   </world>
+
+  <physics type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>.5</real_time_factor>
+<!--       <real_time_update_rate>10000</real_time_update_rate>
+ -->      <gravity>0 0 -9.8</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <erp>0.2</erp>
+          <cfm>0</cfm>
+
+        </constraints>
+      </ode>
+  </physics>
 </sdf>
