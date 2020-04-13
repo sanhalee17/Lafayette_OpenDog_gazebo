@@ -18,7 +18,7 @@ from std_msgs.msg import  Float64, Int32, Bool   #,Float64Stamped, Int32Stamped,
 from geometry_msgs.msg import TwistStamped, TransformStamped, Pose #PoseStamped
 import std_srvs.srv
 
-roslib.load_manifest('opendog_ros')
+roslib.load_manifest('openDog_description')
 
 class GazeboJoint:
 
