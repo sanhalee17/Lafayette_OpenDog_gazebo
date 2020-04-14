@@ -41,22 +41,22 @@ class GazeboJoint:
 
 
 	def femur_joint_callback(self, data):
-
+		#rospy.logwarn('femur callback triggered')
 		self.theta_f = data.data
 		self.joint5_position_controller = Float64()
 		self.joint5_position_controller = self.theta_f
 		#self.joint5.publish = (self.joint5_position_controller)
 		self.femur_controller.publish(self.joint5_position_controller)
+		rospy.logwarn(self.joint1_position_controller)
 
 	def tibia_joint_callback(self, data):
-
+		#rospy.logwarn('tibia_received')
 		self.theta_t = data.data
 		self.joint1_position_controller = Float64()
 		self.joint1_position_controller = self.theta_t
 		#self.joint1.publish = (self.joint1_position_controller)
 		self.tibia_controller.publish(self.joint1_position_controller)
-
-
+		
 
 def main(args):
 	rospy.init_node('gazebo_joint',anonymous=True)
