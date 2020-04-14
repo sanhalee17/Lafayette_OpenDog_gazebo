@@ -76,29 +76,29 @@
     <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_1">
         <param name = "femur_angle" value = "/theta_f_1"/>
         <param name = "tibia_angle" value = "/theta_t_1"/>
-        <param name = "tibia_controller" value = "/joint1_position_controller/command"/>
-        <param name = "femur_controller" value = "/joint5_position_controller/command"/>
+        <param name = "tibia_controller" value = "/opendog/joint1_position_controller/command"/>
+        <param name = "femur_controller" value = "/opendog/joint5_position_controller/command"/>
     </node>
 
     <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_2">
         <param name = "femur_angle" value = "/theta_f_2"/>
         <param name = "tibia_angle" value = "/theta_t_2"/>
-        <param name = "tibia_controller" value = "/joint2_position_controller/command"/>
-        <param name = "femur_controller" value = "/joint6_position_controller/command"/>
+        <param name = "tibia_controller" value = "/opendog/joint2_position_controller/command"/>
+        <param name = "femur_controller" value = "/opendog//joint6_position_controller/command"/>
     </node>
 
     <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_3">
         <param name = "femur_angle" value = "/theta_f_3"/>
         <param name = "tibia_angle" value = "/theta_t_3"/>
-        <param name = "tibia_controller" value = "/joint3_position_controller/command"/>
-        <param name = "femur_controller" value = "/joint7_position_controller/command"/>
+        <param name = "tibia_controller" value = "/opendog//joint3_position_controller/command"/>
+        <param name = "femur_controller" value = "/opendog/joint7_position_controller/command"/>
     </node>
 
     <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_4">
         <param name = "femur_angle" value = "/theta_f_4"/>
         <param name = "tibia_angle" value = "/theta_t_4"/>
-        <param name = "tibia_controller" value = "/joint4_position_controller/command"/>
-        <param name = "femur_controller" value = "/joint8_position_controller/command"/>
+        <param name = "tibia_controller" value = "/opendog/joint4_position_controller/command"/>
+        <param name = "femur_controller" value = "/opendog/joint8_position_controller/command"/>
     </node>
 
 
