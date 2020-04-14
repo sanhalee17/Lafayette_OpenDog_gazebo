@@ -30,8 +30,8 @@ class GazeboJoint:
 
 		self.theta_f = rospy.get_param('~femur_angle', "/theta_f")
 		self.theta_t = rospy.get_param('~tibia_angle', "/theta_t")
-		self.joint1_position_controller = rospy.get_param('~tibia controller', "/joint1_position_controller/command")
-		self.joint5_position_controller = rospy.get_param('~femur controller', "/joint5_position_controller/command")
+		self.joint1_position_controller = rospy.get_param('~tibia_controller', "/joint1_position_controller/command")
+		self.joint5_position_controller = rospy.get_param('~femur_controller', "/joint5_position_controller/command")
 		
 		self.sub_F = rospy.Subscriber(self.theta_f, Float64, self.femur_joint_callback)
 		self.sub_T = rospy.Subscriber(self.theta_t, Float64, self.tibia_joint_callback)
@@ -56,7 +56,7 @@ class GazeboJoint:
 		self.joint1_position_controller = self.theta_t
 		#self.joint1.publish = (self.joint1_position_controller)
 		self.tibia_controller.publish(self.joint1_position_controller)
-		
+
 
 def main(args):
 	rospy.init_node('gazebo_joint',anonymous=True)
