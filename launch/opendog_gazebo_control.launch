@@ -6,7 +6,7 @@
   <param name="robot_description" command="cat $(arg model)" />
 
  <!-- load joint control launch file for gazebodog -->
- <include file="$(find opendog_control)/launch/opendog_control.launch">
+ <include file="$(find openDog_description)/launch/openDog_controller.launch">
  </include>
 
   <!-- Show in Rviz   -->
