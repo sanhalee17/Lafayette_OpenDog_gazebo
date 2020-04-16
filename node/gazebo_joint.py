@@ -36,26 +36,27 @@ class GazeboJoint:
 		self.sub_F = rospy.Subscriber(self.theta_f, Float64, self.femur_joint_callback)
 		self.sub_T = rospy.Subscriber(self.theta_t, Float64, self.tibia_joint_callback)
 
-		self.tibia_controller = rospy.Publisher(self.joint1_position_controller, Float64, queue_size = 1)
-		self.femur_controller = rospy.Publisher(self.joint5_position_controller, Float64, queue_size = 1)
+		self.tibia_controller = rospy.Publisher(self.joint5_position_controller, Float64, queue_size = 1)
+		self.femur_controller = rospy.Publisher(self.joint1_position_controller, Float64, queue_size = 1)
 
+
+	def tibia_joint_callback(self, data):
+		#rospy.logwarn('tibia callback triggered')
+		self.theta_t = data.data
+		self.joint5_position_controller = Float64()
+		self.joint5_position_controller = self.theta_t
+		#self.joint5.publish = (self.joint5_position_controller)
+		self.tibia_controller.publish(self.joint5_position_controller)
+		#rospy.logwarn(self.joint1_position_controller)
 
 	def femur_joint_callback(self, data):
 		#rospy.logwarn('femur callback triggered')
 		self.theta_f = data.data
-		self.joint5_position_controller = Float64()
-		self.joint5_position_controller = self.theta_f
-		#self.joint5.publish = (self.joint5_position_controller)
-		self.femur_controller.publish(self.joint5_position_controller)
-		rospy.logwarn(self.joint1_position_controller)
-
-	def tibia_joint_callback(self, data):
-		#rospy.logwarn('tibia_received')
-		self.theta_t = data.data
 		self.joint1_position_controller = Float64()
-		self.joint1_position_controller = self.theta_t
+		self.joint1_position_controller = -self.theta_f
 		#self.joint1.publish = (self.joint1_position_controller)
-		self.tibia_controller.publish(self.joint1_position_controller)
+		self.femur_controller.publish(self.joint1_position_controller)
+        #rospy.logwarn(self.joint1_position_controller)
 
 
 def main(args):
