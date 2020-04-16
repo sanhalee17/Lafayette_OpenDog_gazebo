@@ -8,41 +8,73 @@ opendog:
   joint1_position_controller:
     type: effort_controllers/JointPositionController
     joint: femur_joint1
+<<<<<<< HEAD
     pid: {p: 100.0, i: 100, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint2_position_controller:
     type: effort_controllers/JointPositionController
     joint: femur_joint2
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint3_position_controller:
     type: effort_controllers/JointPositionController
     joint: femur_joint3
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint4_position_controller:
     type: effort_controllers/JointPositionController
     joint: femur_joint4
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   # Tibia Joint Position Controllers --------------------------------
 
   joint5_position_controller:
     type: effort_controllers/JointPositionController
     joint: knee_joint_leg1
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint6_position_controller:
     type: effort_controllers/JointPositionController
     joint: knee_joint_leg2
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint7_position_controller:
     type: effort_controllers/JointPositionController
     joint: knee_joint_leg3
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 1000000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
 
   joint8_position_controller:
     type: effort_controllers/JointPositionController
     joint: knee_joint_leg4
+<<<<<<< HEAD
     pid: {p: 100.0, i: 0.01, d: 10000.0}
+=======
+    pid: {p: 1000000000.0, i: 0.01, d: 100000.0}
+>>>>>>> 6f70a5ca7957db89d7e45edd3ca046b6b1562f04
