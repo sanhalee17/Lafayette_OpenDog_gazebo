@@ -285,7 +285,7 @@
 
 	<link name = "upper_extrusion_leg1">
 		<visual>
-			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
+			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 1.5708 0"/>
 			<geometry>
 				<box size = "0.02 0.06 0.39"/>
 			</geometry>
@@ -310,7 +310,7 @@
 
 	<link name = "upper_extrusion_leg2">
 		<visual>
-			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
+			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 1.5708 0"/>
 			<geometry>
 				<box size = "0.02 0.06 0.39"/>
 			</geometry>
@@ -335,7 +335,7 @@
 
 	<link name = "upper_extrusion_leg3">
 		<visual>
-			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
+			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 1.5708 0"/>
 			<geometry>
 				<box size = "0.02 0.06 0.39"/>
 			</geometry>
@@ -361,7 +361,7 @@
 
 	<link name = "upper_extrusion_leg4">
 		<visual>
-			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
+			<origin xyz = "0.0 0.195 0.0" rpy = "1.5708 1.5708 0"/>
 			<geometry>
 				<box size = "0.02 0.06 0.39"/>
 			</geometry>
@@ -418,9 +418,9 @@
     <joint name="femur_joint1" type="revolute">
         <parent link="hip_tube_1"/>
         <child link="upper_extrusion_leg1"/>
-        <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.3" effort="8000" velocity="0.1"/>
-        <axis xyz="0 0 1"/>
+        <origin xyz="-0.05 0 0" rpy="-3.14 0 0"/>
+        <limit lower="1.579" upper="0.3" effort="8000" velocity="0.1"/>
+        <axis xyz="1 0 0"/>
     </joint>
 
     <transmission name="simple_trans0">
@@ -438,9 +438,9 @@
     <joint name="femur_joint2" type="revolute">
         <parent link="hip_tube_2"/>
         <child link="upper_extrusion_leg2"/>
-        <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.3" effort="8000" velocity="0.1"/>
-        <axis xyz="0 0 1"/>
+        <origin xyz="0.05 0 0" rpy="-3.14 0 0"/>
+        <limit lower="1.579" upper="0.3" effort="8000" velocity="0.1"/>
+        <axis xyz="1 0 0"/>
     </joint>
 
     <transmission name="simple_trans1">
@@ -457,9 +457,9 @@
     <joint name="femur_joint3" type="revolute">
         <parent link="hip_tube_3"/>
         <child link="upper_extrusion_leg3"/>
-        <origin xyz="-0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.3" effort="8000" velocity="0.1"/>
-        <axis xyz="0 0 1"/>
+        <origin xyz="-0.05 0 0" rpy="-3.14 0 0"/>
+        <limit lower="1.579" upper="0.3" effort="8000" velocity="0.1"/>
+        <axis xyz="1 0 0"/>
     </joint>
 
     <transmission name="simple_trans2">
@@ -476,9 +476,9 @@
     <joint name="femur_joint4" type="revolute">
         <parent link="hip_tube_4"/>
         <child link="upper_extrusion_leg4"/>
-        <origin xyz="0.05 0 0" rpy="1.5708 -3.14 1.5708"/>
-        <limit lower="-1.579" upper="-0.3" effort="8000" velocity="0.1"/>
-        <axis xyz="0 0 1"/>
+        <origin xyz="0.05 0 0" rpy="-3.14 0 0"/>
+        <limit lower="1.579" upper="0.3" effort="8000" velocity="0.1"/>
+        <axis xyz="1 0 0"/>
     </joint>
 
     <transmission name="simple_trans3">
@@ -495,7 +495,7 @@
     <joint name = "knee_joint_leg1" type = "revolute">
         <parent link = "upper_extrusion_leg1"/>
         <child link = "lower_extrusion_leg1"/>
-        <origin xyz="0 0.39 0" rpy="0 0 0"/>
+        <origin xyz="0 0.39 0" rpy="1.5708 1.5708 1.5708"/>
         
         <limit effort="8000"  lower="1.352" upper="2.8715" velocity="0.1"/>
         <axis xyz="0 0 1"/>
@@ -516,7 +516,7 @@
     <joint name = "knee_joint_leg2" type = "revolute">
         <parent link = "upper_extrusion_leg2"/>
         <child link = "lower_extrusion_leg2"/>
-        <origin xyz="0 0.39 0" rpy="0 0 0"/>
+        <origin xyz="0 0.39 0" rpy="1.5708 1.5708 1.5708"/>
         <limit effort="8000"  lower="1.352" upper="2.8715" velocity="0.1"/>
         <axis xyz="0 0 1"/>
         
@@ -536,7 +536,7 @@
     <joint name = "knee_joint_leg3" type = "revolute">
         <parent link = "upper_extrusion_leg3"/>
         <child link = "lower_extrusion_leg3"/>
-        <origin xyz="0 0.39 0" rpy="0 0 0"/>
+        <origin xyz="0 0.39 0" rpy="1.5708 1.5708 1.5708"/>
         <limit effort="8000"  lower="1.352" upper="2.8715" velocity="0.1"/>
         <axis xyz="0 0 1"/>
     </joint>
@@ -557,7 +557,7 @@
     <joint name = "knee_joint_leg4" type = "revolute">
         <parent link = "upper_extrusion_leg4"/>
         <child link = "lower_extrusion_leg4"/>
-        <origin xyz="0 0.39 0" rpy="0 0 0 "/>
+        <origin xyz="0 0.39 0" rpy="1.5708 1.5708 1.5708"/>
         <limit effort="8000"  lower="1.352" upper="2.8715" velocity="0.1"/>
         <axis xyz="0 0 1"/>
     </joint>
