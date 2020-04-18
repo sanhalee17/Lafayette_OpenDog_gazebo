@@ -53,7 +53,7 @@ class GazeboJoint:
 		#rospy.logwarn('femur callback triggered')
 		self.theta_f = data.data
 		self.joint1_position_controller = Float64()
-		self.joint1_position_controller = -self.theta_f
+		self.joint1_position_controller = -(3.14 - self.theta_f)
 		#self.joint1.publish = (self.joint1_position_controller)
 		self.femur_controller.publish(self.joint1_position_controller)
         #rospy.logwarn(self.joint1_position_controller)
