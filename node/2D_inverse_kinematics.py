@@ -115,7 +115,7 @@ class InverseKinematics:
 			# self.theta_f = Float64Stamped()
 			# self.theta_f.header.stamp = rospy.Time.now()
 			self.theta_f = Float64()
-			self.theta_f = self.theta_P - self.theta_K - self.theta_K_shift + self.theta_H
+			self.theta_f = self.theta_P - self.theta_K - self.theta_K_shift #+ self.theta_H
 			print("theta_f: " + str(self.theta_f))
 			self.femur.publish(self.theta_f)
 

@@ -11,8 +11,8 @@
         <param name = "y_center" value = '25'/>
         <param name = "y_lift" value = '5.5'/>
         <param name = "leg_pace" value = '3.0'/>
-        <param name = "x_stride" value = '3.3'/>
-        <param name = "x_center" value = '10.0'/>
+        <param name = "x_stride" value = '-3.3'/>
+        <param name = "x_center" value = '2.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_2">
@@ -21,28 +21,28 @@
         <param name = "y_center" value = '25'/>
         <param name = "y_lift" value = '5.5'/>
         <param name = "leg_pace" value = '3.0'/>
-        <param name = "x_stride" value = '3.3'/>
-        <param name = "x_center" value = '10.0'/>
+        <param name = "x_stride" value = '-3.3'/>
+        <param name = "x_center" value = '2.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_3">
         <param name = "foot_position" value = "/footPosition_3"/>
         <param name = "phase_shift" value = '4.712389'/>    <!-- '2.356194'/> -->
         <param name = "y_center" value = '25'/>
-        <param name = "y_lift" value = '3'/>
+        <param name = "y_lift" value = '5'/>
         <param name = "leg_pace" value = '3.0'/>
-        <param name = "x_stride" value = '3.3'/>
-        <param name = "x_center" value = '10.0'/>
+        <param name = "x_stride" value = '-3.3'/>
+        <param name = "x_center" value = '0.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_4">
         <param name = "foot_position" value = "/footPosition_4"/>
         <param name = "phase_shift" value = '1.570796'/>      <!-- '1.570796'/> -->
         <param name = "y_center" value = '25'/>
-        <param name = "y_lift" value = '3'/>
+        <param name = "y_lift" value = '5'/>
         <param name = "leg_pace" value = '3.0'/>
-        <param name = "x_stride" value = '3.3'/>
-        <param name = "x_center" value = '10.0'/>
+        <param name = "x_stride" value = '-3.3'/>
+        <param name = "x_center" value = '0.0'/>
     </node>
 
     <node pkg="openDog_description" type="2D_inverse_kinematics.py" name="inverse_kinematics_1">
