@@ -46,8 +46,9 @@ class GazeboJoint:
 		self.joint5_position_controller = Float64()
 		self.joint5_position_controller = self.theta_t
 		#self.joint5.publish = (self.joint5_position_controller)
+        #rospy.logwarn(str(self.theta_f))
 		self.tibia_controller.publish(self.joint5_position_controller)
-		#rospy.logwarn(self.joint1_position_controller)
+        #rospy.logwarn(str(self.joint5_position_controller))
 
 	def femur_joint_callback(self, data):
 		#rospy.logwarn('femur callback triggered')
@@ -55,8 +56,9 @@ class GazeboJoint:
 		self.joint1_position_controller = Float64()
 		self.joint1_position_controller = self.theta_f
 		#self.joint1.publish = (self.joint1_position_controller)
+        #rospy.logwarn(str(self.joint1_position_controller))
 		self.femur_controller.publish(self.joint1_position_controller)
-        #rospy.logwarn(self.joint1_position_controller)
+        
 
 
 def main(args):
