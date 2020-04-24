@@ -204,7 +204,7 @@
       <inertia
         ixx="0.00452676666667" ixy="0.0" ixz="0.0"
         iyy="0.00447116666667" iyz="0.0"
-        izz="9.26666666667e-05"/>
+        izz="0.0000926666666667"/>
     </inertial>
 	</link>
 
@@ -229,7 +229,7 @@
       <inertia
         ixx="0.00452676666667" ixy="0.0" ixz="0.0"
         iyy="0.00447116666667" iyz="0.0"
-        izz="9.26666666667e-05"/>
+        izz="0.0000926666666667"/>
     </inertial>
 
 	</link>
@@ -254,7 +254,7 @@
       <inertia
         ixx="0.00452676666667" ixy="0.0" ixz="0.0"
         iyy="0.00447116666667" iyz="0.0"
-        izz="9.26666666667e-05"/>
+        izz="0.0000926666666667"/>
     </inertial>
 	</link>
 
@@ -278,7 +278,7 @@
       <inertia
         ixx="0.00452676666667" ixy="0.0" ixz="0.0"
         iyy="0.00447116666667" iyz="0.0"
-        izz="9.26666666667e-05"/>
+        izz="0.0000926666666667"/>
     </inertial>
 	</link>
 	
@@ -385,15 +385,162 @@
 
 	</link>
 
-    <joint name = "foot_1">
+   <link name = "foot_1">
         <visual>
             <origin xyz = "0 0 0" rpy = "0 0 0"/>
             <geometry>
                 <sphere radius = "0.04"/>
             </geometry>
             <material name = "blue"/>
-        <visual/>
-    </joint>
+        </visual>
+        <collision>
+            <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+        <surface>
+            <friction>
+            <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+            </ode>
+        </friction>
+      </surface>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </collision>
+    <inertial>
+    <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+    <mass value="0.0"/>
+          <inertia
+        ixx="0.0000001" ixy="0.0" ixz="0.0"
+        iyy="0.0000001" iyz="0.0"
+        izz="0.0000001"/>
+    </inertial>
+    </link>
+
+    <link name = "foot_2">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </visual>
+        <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+            </ode>
+        </friction>
+      </surface>
+            <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </collision>
+    <inertial>
+    <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+    <mass value="0.0"/>
+          <inertia
+        ixx="0.0000001" ixy="0.0" ixz="0.0"
+        iyy="0.0000001" iyz="0.0"
+        izz="0.0000001"/>
+    </inertial>
+    </link>
+
+    <link name = "foot_3">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </visual>
+        <collision>
+         <surface>
+            <friction>
+            <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+            </ode>
+        </friction>
+      </surface>
+            <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </collision>
+    <inertial>
+    <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+    <mass value="0.0"/>
+          <inertia
+        ixx="0.0000001" ixy="0.0" ixz="0.0"
+        iyy="0.0000001" iyz="0.0"
+        izz="0.0000001"/>
+    </inertial>
+    </link>
+
+    <link name = "foot_4">
+        <visual>
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </visual>
+        <collision>
+         <surface>
+            <friction>
+            <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+            </ode>
+        </friction>
+      </surface>
+            <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+            <geometry>
+                <sphere radius = "0.04"/>
+            </geometry>
+            <material name = "blue"/>
+        </collision>
+    <inertial>
+    <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
+    <mass value="0.0"/>
+          <inertia
+        ixx="0.0000001" ixy="0.0" ixz="0.0"
+        iyy="0.0000001" iyz="0.0"
+        izz="0.0000001"/>
+    </inertial>
+    </link>
+
+    <joint name = "foot_1_joint" type = "fixed">
+        <parent link = "lower_extrusion_leg1"/>
+        <child link  = "foot_1"/>
+        <origin xyz = "0 0.31 0" rpy = "0 0 0"/>
+    </joint> 
+
+    <joint name = "foot_2_joint" type = "fixed">
+        <parent link = "lower_extrusion_leg2"/>
+        <child link  = "foot_2"/>
+        <origin xyz = "0 0.31 0" rpy = "0 0 0"/>
+    </joint> 
+
+    <joint name = "foot_3_joint" type = "fixed">
+        <parent link = "lower_extrusion_leg3"/>
+        <child link  = "foot_3"/>
+        <origin xyz = "0 0.31 0" rpy = "0 0 0"/>
+    </joint> 
+
+    <joint name = "foot_4_joint" type = "fixed">
+        <parent link = "lower_extrusion_leg4"/>
+        <child link  = "foot_4"/>
+        <origin xyz = "0 0.31 0" rpy = "0 0 0"/>
+    </joint> 
+    
 
     <joint name = "dummy_joint" type = "fixed">
         <parent link = "openDog_body"/>
