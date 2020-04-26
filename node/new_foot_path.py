@@ -60,7 +60,7 @@ class FootPath:
 		
 			# now where should the foot be?
 			# rospy.logw-rn(self.x_center, self.x_stride, self.leg_pace, self.tnow, self.phase_shift)
-			self.xnow = -(self.x_center + self.x_stride*sin(self.leg_pace*self.tnow - self.phase_shift))
+			self.xnow = (self.x_center + self.x_stride*sin(self.leg_pace*self.tnow - self.phase_shift))
 			#rospy.logwarn(str(self.xnow) + ' , ' + str(self.ynow))
 
 
