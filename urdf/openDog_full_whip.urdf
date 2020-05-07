@@ -676,6 +676,17 @@
         <axis xyz="0 1 0"/>
     </joint>
 
+    <transmission name="simple_trans8">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hip_joint_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_9">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name="hip_joint_2" type="revolute">
         <parent link="openDog_body"/>
         <child link="hip_tube_2"/>
@@ -685,6 +696,17 @@
 
     </joint>
 
+    <transmission name="simple_trans9">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hip_joint_2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_10">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name="hip_joint_3" type="revolute">
         <parent link="openDog_body"/>
         <child link="hip_tube_3"/>
@@ -693,6 +715,17 @@
         <axis xyz="0 1 0"/>
     </joint>
 
+    <transmission name="simple_trans10">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hip_joint_3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_11">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+
     <joint name="hip_joint_4" type="revolute">
         <parent link="openDog_body"/>
         <child link="hip_tube_4"/>
@@ -700,6 +733,17 @@
         <limit lower="-0.524" upper="1.579" effort="8000" velocity="0.1"/>
         <axis xyz="0 1 0"/>
     </joint>
+
+    <transmission name="simple_trans11">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hip_joint_4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_12">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
 
     <joint name="femur_joint1" type="revolute">
         <parent link="hip_tube_1"/>
