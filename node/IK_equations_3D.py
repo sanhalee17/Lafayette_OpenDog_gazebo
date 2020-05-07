@@ -14,27 +14,16 @@ class inverse_kinematics():
 
 		# robot dimensions
 
-        self.lf = 2.70 # femur, inches
-        self.lt = 2.60 # tibia, inches
-        self.ls = 1.40 # shoulder offset, inches
+        self.lf = 0.39 # femur, inches
+        self.lt = 0.31 # tibia, inches
+        self.ls = 0.165 # shoulder offset, inches
         
-        self.find_xyz(0,1)
+        foot_xyz = self.find_xyz(0,1,0,0,0,0,0,0,0,1)
 
-    def find_xyz(self, time, leg):
+    def find_xyz(self, time, leg, phase_shift, x_center, x_stride, y_center, y_offset, z_center, z_lift, leg_pace):
 
         self.t = time
         self.leg = leg
-
-        leg_pace = 5.0 # pace of gait
-
-        x_center = 0.2
-        x_stride = 1
-
-        y_center = -1
-        y_offset = 0
-
-        z_center = -4.5
-        z_lift = 1
 
         if self.leg == 1:
             leg1_offset = 0			# front left
@@ -63,19 +52,24 @@ class inverse_kinematics():
         if (self.z) < z_center: self.z = z_center
  
 
-    def JointAng(self, time, leg):
+    def JointAng(self, time, leg, phase_shift, x_center, x_stride, y_center, y_offset, z_center, z_lift, leg_pace):
 
-        self.find_xyz(time, leg)
+        self.find_xyz(time, leg, phase_shift, x_center, x_stride, y_center, y_offset, z_center, z_lift, leg_pace)
 
         self.angs, self.angf, self.angt = self.getJointAng(self.x, self.y, self.z, leg)
 
-        return [self.angs, self.angf, self.angt]
+        myAngles = [self.angs, self.angf, self.angt]
+        foot_xyz = [self.x, self.y, self.z]
+
+        return myAngles, foot_xyz
 
 
     def getJointAng(self, x, y, z, leg):
 
         if (y<0):
             Adxy = arctan(z/y)
+        elif (y==0):
+            Adxy = pi/2
         else:
             Adxy = pi + arctan(z/y)
 
@@ -87,6 +81,8 @@ class inverse_kinematics():
 
             if (x<0):
                 Ad = pi + arctan((z+self.ls*sin(As))/x)
+            elif (x==0):
+                Ad = pi+pi/2
             else:
                 Ad = arctan((z+self.ls*sin(As))/x)
 

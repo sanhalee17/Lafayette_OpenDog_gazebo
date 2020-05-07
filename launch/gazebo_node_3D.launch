@@ -4,85 +4,76 @@
 
 <launch>
 
-
-    <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_1">
-        <param name = "foot_position" value = "/footPosition_1"/>
-        <param name = "phase_shift" value = '0'/>
-        <param name = "y_center" value = '22'/>
-        <param name = "y_lift" value = '3.5'/>
-        <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_stride" value = '-4'/>
-        <param name = "x_center" value = '4'/>
-    </node>
-
-    <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_2">
-        <param name = "foot_position" value = "/footPosition_2"/>
-        <param name = "phase_shift" value = '3.1415926'/>   <!-- '0.785398' -->
-        <param name = "y_center" value = '22'/>
-        <param name = "y_lift" value = '3.0'/>
-        <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_stride" value = '-4'/>
-        <param name = "x_center" value = '4'/>
-    </node>
-
-    <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_3">
-        <param name = "foot_position" value = "/footPosition_3"/>
-        <param name = "phase_shift" value = '3.1415926'/>    <!-- '4.712389'/> -->
-        <param name = "y_center" value = '22'/>
-        <param name = "y_lift" value = '3.0'/>
-        <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_stride" value = '-4'/>
-        <param name = "x_center" value = '-3'/>
-    </node>
-
-    <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_4">
-        <param name = "foot_position" value = "/footPosition_4"/>
-        <param name = "phase_shift" value = '0'/>      <!-- '1.570796'/> -->
-        <param name = "y_center" value = '22'/>
-        <param name = "y_lift" value = '3.0'/>
-        <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_stride" value = '-4'/>
-        <param name = "x_center" value = '-3'/>
-    </node>
-
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_1">
+        <param name = "phase_shift" value = '0'/>
+        <param name = "leg_pace" value = '3.5'/>
+        <param name = "x_center" value = '4'/>
+        <param name = "x_stride" value = '4'/>
+        <param name = "y_center" value = '-1'/>
+        <param name = "y_offset" value = '0'/>
+        <param name = "z_center" value = '-22'/>
+        <param name = "z_lift" value = '3.5'/>
         <param name = "femur_angle" value = "/theta_f_1"/>
         <param name = "tibia_angle" value = "/theta_t_1"/>
         <param name = "hip_angle" value = "/theta_h_1"/>
         <param name = "foot_position" value = "/footPosition_1"/>
-        <param name = "leg" value = "1"/>
+        <param name = "leg" value = '1'/>
     </node>
 
-
-
-
+    
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_2">
+        <param name = "phase_shift" value = '3.1415926'/>
+        <param name = "leg_pace" value = '3.5'/>
+        <param name = "x_center" value = '4'/>
+        <param name = "x_stride" value = '4'/>
+        <param name = "y_center" value = '-1'/>
+        <param name = "y_offset" value = '0'/>
+        <param name = "z_center" value = '-22'/>
+        <param name = "z_lift" value = '3.5'/>
         <param name = "femur_angle" value = "/theta_f_2"/>
         <param name = "tibia_angle" value = "/theta_t_2"/>
         <param name = "hip_angle" value = "/theta_h_2"/>
         <param name = "foot_position" value = "/footPosition_2"/>
-        <param name = "leg" value = "2"/>
+        <param name = "leg" value = '2'/>
     </node>
 
+
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_3">
+        <param name = "phase_shift" value = '3.1415926'/>
+        <param name = "leg_pace" value = '3.5'/>
+        <param name = "x_center" value = '4'/>
+        <param name = "x_stride" value = '4'/>
+        <param name = "y_center" value = '-1'/>
+        <param name = "y_offset" value = '0'/>
+        <param name = "z_center" value = '-22'/>
+        <param name = "z_lift" value = '3.5'/>
         <param name = "femur_angle" value = "/theta_f_3"/>
         <param name = "tibia_angle" value = "/theta_t_3"/>
         <param name = "hip_angle" value = "/theta_h_3"/>
         <param name = "foot_position" value = "/footPosition_3"/>
-        <param name = "leg" value = "3"/>
+        <param name = "leg" value = '3'/>
     </node>
 
+
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_4">
+        <param name = "phase_shift" value = '0'/> 
+        <param name = "leg_pace" value = '3.5'/>
+        <param name = "x_center" value = '4'/>
+        <param name = "x_stride" value = '4'/>
+        <param name = "y_center" value = '-1'/>
+        <param name = "y_offset" value = '0'/>
+        <param name = "z_center" value = '-22'/>
+        <param name = "z_lift" value = '3.5'/>
         <param name = "femur_angle" value = "/theta_f_4"/>
         <param name = "tibia_angle" value = "/theta_t_4"/>
         <param name = "hip_angle" value = "/theta_h_4"/>
         <param name = "foot_position" value = "/footPosition_4"/>
-        <param name = "leg" value = "4"/>
+        <param name = "leg" value = '4'/>
     </node>
 
 
 
-    <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_1">
+    <!-- <node pkg="openDog_description" type="gazebo_joint.py" name="gazebo_joint_1">
         <param name = "femur_angle" value = "/theta_f_1"/>
         <param name = "tibia_angle" value = "/theta_t_1"/>
         <param name = "tibia_controller" value = "/opendog/joint1_position_controller/command"/>
@@ -108,7 +99,7 @@
         <param name = "tibia_angle" value = "/theta_t_4"/>
         <param name = "tibia_controller" value = "/opendog/joint4_position_controller/command"/>
         <param name = "femur_controller" value = "/opendog/joint8_position_controller/command"/>
-    </node>
+    </node> -->
 
 <!-- <node pkg="rosservice" type="rosservice" name="body" args="call /gazebo/apply_body_wrench '{body_name: &quot;openDog_full::lower_extrusion_leg4_fixed_joint_lump__foot_4_collision_1&quot;,reference_frame: &quot;openDog_full::lower_extrusion_leg4_fixed_joint_lump__foot_4_collision_1&quot;, reference_point: { x: 0, y: -0.4, z: 0},wrench: { force: { x: 0, y: 500 , z: 0 } }, start_time: 0, duration: -1 }'" />  -->
 
