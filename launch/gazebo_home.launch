@@ -8,41 +8,41 @@
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_1">
         <param name = "foot_position" value = "/footPosition_1"/>
         <param name = "phase_shift" value = '0'/>
-        <param name = "y_center" value = '25'/>
+        <param name = "y_center" value = '22'/>
         <param name = "y_lift" value = '3.0'/>
         <param name = "leg_pace" value = '0.0'/>
         <param name = "x_stride" value = '1.5'/>
-        <param name = "x_center" value = '0.0'/>
+        <param name = "x_center" value = '4.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_2">
         <param name = "foot_position" value = "/footPosition_2"/>
         <param name = "phase_shift" value = '0.0'/>   <!-- '0.785398' -->
-        <param name = "y_center" value = '25.5'/>
+        <param name = "y_center" value = '22'/>
         <param name = "y_lift" value = '3.0'/>
         <param name = "leg_pace" value = '0.0'/>
         <param name = "x_stride" value = '1.5'/>
-        <param name = "x_center" value = '0.0'/>
+        <param name = "x_center" value = '4.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_3">
         <param name = "foot_position" value = "/footPosition_3"/>
         <param name = "phase_shift" value = '0.0'/>    <!-- '2.356194'/> -->
-        <param name = "y_center" value = '25'/>
+        <param name = "y_center" value = '22'/>
         <param name = "y_lift" value = '3.0'/>
         <param name = "leg_pace" value = '0.0'/>
         <param name = "x_stride" value = '1.5'/>
-        <param name = "x_center" value = '4.0'/>
+        <param name = "x_center" value = '-3.0'/>
     </node>
 
     <node pkg ="openDog_description" type="new_foot_path.py" name="pub_foot_path_4">
         <param name = "foot_position" value = "/footPosition_4"/>
         <param name = "phase_shift" value = '0.0'/>      <!-- '1.570796'/> -->
-        <param name = "y_center" value = '25'/>
+        <param name = "y_center" value = '22'/>
         <param name = "y_lift" value = '3.0'/>
         <param name = "leg_pace" value = '0.0'/>
         <param name = "x_stride" value = '1.5'/>
-        <param name = "x_center" value = '4.0'/>
+        <param name = "x_center" value = '-3.0'/>
     </node>
 
     <node pkg="openDog_description" type="2D_inverse_kinematics.py" name="inverse_kinematics_1">
@@ -106,5 +106,10 @@
         <param name = "femur_controller" value = "/opendog/joint8_position_controller/command"/>
     </node>
 
+<node pkg="rosservice" type="rosservice" name="body1" args="call /gazebo/apply_body_wrench '{body_name: &quot;openDog_full::lower_extrusion_leg1&quot;, reference_point: { x: 0, y: 0, z: 0},wrench: { force: { x: 10, y: 0 , z: 10 } }, start_time: 0, duration: -1 }'" /> 
+<node pkg="rosservice" type="rosservice" name="body2" args="call /gazebo/apply_body_wrench '{body_name: &quot;openDog_full::lower_extrusion_leg2&quot;, reference_point: { x: 0, y: 0, z: 0},wrench: { force: { x: 10, y: 0 , z: 10 } }, start_time: 0, duration: -1 }'" /> 
+<node pkg="rosservice" type="rosservice" name="body3" args="call /gazebo/apply_body_wrench '{body_name: &quot;openDog_full::lower_extrusion_leg3&quot;, reference_point: { x: 0, y: 0, z: 0},wrench: { force: { x: 10, y: 0 , z: 10 } }, start_time: 0, duration: -1 }'" /> 
+<node pkg="rosservice" type="rosservice" name="body4" args="call /gazebo/apply_body_wrench '{body_name: &quot;openDog_full::lower_extrusion_leg4&quot;, reference_point: { x: 0, y: 0, z: 0},wrench: { force: { x: 10, y: 0 , z: 10 } }, start_time: 0, duration: -1 }'" /> 
 
+    <!-- <node pkg="rosservice" type="rosservice" name="foot_4" args="call /gazebo/apply_body_wrench '{wrench: { force: { x: 0, y: -30 , z: 0 } }, start_time: 0, duration: -1 }'" /> --> -->
 </launch>
