@@ -57,6 +57,38 @@
         izz="1.0"/>
     </inertial> -->
     </link>
+    <gazebo reference="openDog_body">
+        <mu1 value="2000.0"/>
+        <mu2 value="1000.0"/>
+        <kp value="1.0"/>
+        <kd value="1.0"/>s
+        <selfCollide value="true"/>
+    </gazebo>
+
+    
+    <!-- <link name = "floor">
+    	<visual>
+    		<origin xyz = "0 0 0" rpy = "0 0 0"/>
+    		<geometry>
+    			<box size = "20 20 0.0001"/>
+    		</geometry>
+    		<material name = "blue"/>
+    	</visual>
+        <collision>
+            <origin xyz = "0 0 0" rpy = "0 0 0"/>
+            <geometry>
+                <box size = "20 20 0.0001"/>
+            </geometry>
+        </collision>
+        <inertial>
+       <origin xyz = "0 0 0" rpy = "0 0 0"/>
+    <mass value="1000"/>
+       <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
+    </link> -->
 
     <link name = "dummy_mass">
         <visual>
@@ -193,6 +225,16 @@
 			<material name = "grey"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="0.1"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
             <geometry>
                 <box size = "0.02 0.04 0.31"/>
@@ -217,6 +259,16 @@
 			<material name = "grey"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="0.1"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
             <geometry>
                 <box size = "0.02 0.04 0.31"/>
@@ -243,6 +295,16 @@
 			<material name = "grey"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="0.1"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
             <geometry>
                 <box size = "0.02 0.04 0.31"/>
@@ -267,6 +329,16 @@
 			<material name = "grey"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="0.1"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
             <geometry>
                 <box size = "0.02 0.04 0.31"/>
@@ -292,6 +364,16 @@
 			<material name = "red"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="200.0"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
             <geometry>
                 <box size = "0.02 0.06 0.39"/>
@@ -317,6 +399,16 @@
 			<material name = "red"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="200.0"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
             <geometry>
                 <box size = "0.02 0.06 0.39"/>
@@ -342,6 +434,16 @@
 			<material name = "red"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="200.0"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
             <geometry>
                 <box size = "0.02 0.06 0.39"/>
@@ -368,6 +470,16 @@
 			<material name = "red"/>
 		</visual>
         <collision>
+        <surface>
+            <friction>
+            <ode>
+                <mu1 value="2000.0"/>
+                <mu2 value="1000.0"/>
+                <kp value="200.0"/>
+                <kd value="600.0"/>
+            </ode>
+        </friction>
+      </surface>
             <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
             <geometry>
                 <box size = "0.02 0.06 0.39"/>
@@ -398,8 +510,10 @@
         <surface>
             <friction>
             <ode>
-                <mu>0.5</mu>
-                <mu2>0.5</mu2>
+                <mu1 value="3000.0"/>
+                <mu2 value="1500.0"/>
+                <kp value="2000"/>
+                <kd value="200.0"/>
             </ode>
         </friction>
       </surface>
@@ -430,8 +544,10 @@
         <surface>
             <friction>
             <ode>
-                <mu>0.5</mu>
-                <mu2>0.5</mu2>
+                <mu1 value="3000.0"/>
+                <mu2 value="1500.0"/>
+                <kp value="2000"/>
+                <kd value="200.0"/>
             </ode>
         </friction>
       </surface>
@@ -463,8 +579,10 @@
          <surface>
             <friction>
             <ode>
-                <mu>0.5</mu>
-                <mu2>0.5</mu2>
+                <mu1 value="3000.0"/>
+                <mu2 value="1500.0"/>
+                <kp value="2000"/>
+                <kd value="200.0"/>
             </ode>
         </friction>
       </surface>
@@ -496,8 +614,10 @@
          <surface>
             <friction>
             <ode>
-                <mu>0.5</mu>
-                <mu2>0.5</mu2>
+                <mu1 value="3000.0"/>
+                <mu2 value="1500.0"/>
+                <kp value="2000"/>
+                <kd value="200.0"/>
             </ode>
         </friction>
       </surface>
@@ -539,7 +659,7 @@
         <parent link = "lower_extrusion_leg4"/>
         <child link  = "foot_4"/>
         <origin xyz = "0 0.31 0" rpy = "0 0 0"/>
-    </joint> 
+    </joint>
     
 
     <joint name = "dummy_joint" type = "fixed">
