@@ -35,8 +35,8 @@ class InverseKinematics:
 
 		# Measured Values:
 		# All lengths are in inches and angles are in degrees (and converted to radians)
-		self.length_f = 19.5   # distance from hip to knee pivots
-		self.length_t = 16    # distance from knee pivots to bottom of foot (P)
+		self.length_f = 0.39/0.0254   # distance from hip to knee pivots
+		self.length_t = 0.39/0.0254   # distance from knee pivots to bottom of foot (P)
 		self.theta_K_shift = 13*(pi/180)   #16.6# offset angle, between hip-knee (HK) line and hip-femur ball nut (HN) line
 		self.theta_HKP_shift = -1*(pi/180)    #8-1.5#1# offset angle, between knee-foot (KP) line and knee-tibia link connection (KL) line
 		self.theta_H = 10.3*(pi/180)         #10.3 #15.4 # 16.9 # offset angle, between x-axis and hip constraint (HL)
@@ -107,15 +107,15 @@ class InverseKinematics:
 		# 	print("Angle is too small")
 		else:
 			# Compute angles foot-hip-knee (theta_K) and hip-knee-foot (theta_HKP)
-			self.theta_K = arccos((self.length_f**2 + self.d**2 - self.length_t**2)/(2 * self.d * self.length_f))
-			self.theta_HKP = arccos((self.length_t**2 + self.length_f**2 - self.d**2) / (2 * self.length_f * self.length_t))
+			self.theta_K = self.theta_P - arccos((self.length_f**2 + self.d**2 - self.length_t**2)/(2 * self.d * self.length_f))
+			self.theta_HKP = pi - arccos((self.length_t**2 + self.length_f**2 - self.d**2) / (2 * self.length_f * self.length_t))
 
 			# Calculate desired angle of femur (taking offsets into account)...
 			# ...and publish results
 			# self.theta_f = Float64Stamped()
 			# self.theta_f.header.stamp = rospy.Time.now()
 			self.theta_f = Float64()
-			self.theta_f = self.theta_P - self.theta_K - self.theta_K_shift + self.theta_H
+			self.theta_f = self.theta_K 
 			print("theta_f: " + str(self.theta_f))
 			self.femur.publish(self.theta_f)
 
@@ -132,12 +132,6 @@ class InverseKinematics:
 			self.theta_t = Float64()
 			self.hip.publish(self.theta_h)
 			#rospy.logwarn(str(self.theta_t) + ', ' + str(self.theta_f))
-
-
-
-
-
-
 
 def main(args):
 	rospy.init_node('inverse_kinematics',anonymous=True)
