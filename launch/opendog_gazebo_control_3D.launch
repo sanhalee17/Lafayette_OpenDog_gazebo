@@ -1,0 +1,25 @@
+<launch>
+
+  <arg name="model" default="$(find openDog_description)/urdf/openDog_full_whip.urdf"/>
+
+
+  <param name="robot_description" command="cat $(arg model)" />
+
+ <!-- load joint control launch file for gazebodog -->
+ <include file="$(find opendog_control)/launch/opendog_control_3D.launch">
+ </include>
+
+  <!-- Show in Rviz   -->
+  <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_mira_description)/rviz_config/urdf.rviz"/>-->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args=""/> -->
+
+<!-- launch gazebo world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find openDog_description)/launch/opendog.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Spawn a robot into Gazebo -->
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find openDog_description)/urdf/openDog_full_whip.urdf -urdf -z .3 -model openDog_full_whip" />
+
+</launch>
