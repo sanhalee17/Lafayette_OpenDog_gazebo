@@ -29,17 +29,18 @@ class GazeboJoint3D:
 
 		self.theta_f = rospy.get_param('~femur_angle', "/theta_f")
 		self.theta_t = rospy.get_param('~tibia_angle', "/theta_t")
-        self.theta_h = rospy.get_param('~hip_angle', '/theta_h_1')
-		self.joint1_position_controller = rospy.get_param('~tibia_controller', "/joint1_position_controller/command")
-		self.joint5_position_controller = rospy.get_param('~femur_controller', "/joint5_position_controller/command")
+        self.theta_h = rospy.get_param('~hip_angle', '/theta_h')
+
+        self.joint1_position_controller = rospy.get_param('~tibia_controller', "/joint1_position_controller/command")
+        self.joint5_position_controller = rospy.get_param('~femur_controller', "/joint5_position_controller/command")
         self.joint9_position_controller = rospy.get_param('~hip_controller', "/joint9_position_controller/command")
 		
-		self.sub_F = rospy.Subscriber(self.theta_f, Float64, self.femur_joint_callback)
-		self.sub_T = rospy.Subscriber(self.theta_t, Float64, self.tibia_joint_callback)
+        self.sub_F = rospy.Subscriber(self.theta_f, Float64, self.femur_joint_callback)
+        self.sub_T = rospy.Subscriber(self.theta_t, Float64, self.tibia_joint_callback)
         self.sub_F = rospy.Subscriber(self.theta_h, Float64, self.hip_joint_callback)
 
-		self.tibia_controller = rospy.Publisher(self.joint5_position_controller, Float64, queue_size = 1)
-		self.femur_controller = rospy.Publisher(self.joint1_position_controller, Float64, queue_size = 1)
+        self.tibia_controller = rospy.Publisher(self.joint5_position_controller, Float64, queue_size = 1)
+        self.femur_controller = rospy.Publisher(self.joint1_position_controller, Float64, queue_size = 1)
         self.hip_controller = rospy.Publisher(self.joint9_position_controller, Float64, queue_size = 1)
 
 
@@ -63,6 +64,7 @@ class GazeboJoint3D:
 		self.femur_controller.publish(self.joint1_position_controller)
 
     def hip_joint_callback(self, data):
+        #callback triggerred
         self.theta_h = data.data
         self.joint9_position_controller = Float64()
         self.joint9_position_controller = self.theta_h
@@ -71,7 +73,7 @@ class GazeboJoint3D:
 
 
 def main(args):
-	rospy.init_node('gazebo_joint',anonymous=True)
+	rospy.init_node('3D_gazebo_joint',anonymous=True)
 	GJ = GazeboJoint3D()
 
 	try:
