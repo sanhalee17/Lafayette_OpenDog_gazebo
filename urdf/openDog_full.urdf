@@ -230,7 +230,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="0.1"/>
+                <kp value="20"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -244,9 +244,9 @@
         <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
     <mass value="0.556"/>
       <inertia
-        ixx="0.00452676666667" ixy="0.0" ixz="0.0"
-        iyy="0.00447116666667" iyz="0.0"
-        izz="0.0000926666666667"/>
+        ixx="0.0452676666667" ixy="0.0" ixz="0.0"
+        iyy="0.0447116666667" iyz="0.0"
+        izz="0.000926666666667"/>
     </inertial>
 	</link>
 
@@ -264,7 +264,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="0.1"/>
+                <kp value="2"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -279,9 +279,9 @@
         <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
     <mass value="0.556"/>
       <inertia
-        ixx="0.00452676666667" ixy="0.0" ixz="0.0"
-        iyy="0.00447116666667" iyz="0.0"
-        izz="0.0000926666666667"/>
+        ixx="0.0452676666667" ixy="0.0" ixz="0.0"
+        iyy="0.0447116666667" iyz="0.0"
+        izz="0.000926666666667"/>
     </inertial>
 
 	</link>
@@ -300,7 +300,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="0.1"/>
+                <kp value="20"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -314,9 +314,9 @@
         <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
     <mass value="0.556"/>
       <inertia
-        ixx="0.00452676666667" ixy="0.0" ixz="0.0"
-        iyy="0.00447116666667" iyz="0.0"
-        izz="0.0000926666666667"/>
+        ixx="0.0452676666667" ixy="0.0" ixz="0.0"
+        iyy="0.0447116666667" iyz="0.0"
+        izz="0.000926666666667"/>
     </inertial>
 	</link>
 
@@ -334,7 +334,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="0.1"/>
+                <kp value="20"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -348,9 +348,9 @@
     <origin xyz = "0.0 0.155 0.0" rpy = "1.5708 3.14 0"/>
     <mass value="0.556"/>
       <inertia
-        ixx="0.00452676666667" ixy="0.0" ixz="0.0"
-        iyy="0.00447116666667" iyz="0.0"
-        izz="0.0000926666666667"/>
+        ixx="0.0452676666667" ixy="0.0" ixz="0.0"
+        iyy="0.0447116666667" iyz="0.0"
+        izz="0.000926666666667"/>
     </inertial>
 	</link>
 	
@@ -369,7 +369,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="200.0"/>
+                <kp value="20.0"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -384,9 +384,9 @@
     <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
     <mass value="1.009"/>
       <inertia
-        ixx="0.013091775" ixy="0.0" ixz="0.0"
-        iyy="0.000336333333333" iyz="0.0"
-        izz="0.0128227083333"/>
+        ixx="0.13091775" ixy="0.0" ixz="0.0"
+        iyy="0.00336333333333" iyz="0.0"
+        izz="0.128227083333"/>
     </inertial>
 	</link>
 
@@ -404,7 +404,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="200.0"/>
+                <kp value="20.0"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -419,9 +419,9 @@
     <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
     <mass value="1.009"/>
       <inertia
-        ixx="0.013091775" ixy="0.0" ixz="0.0"
-        iyy="0.000336333333333" iyz="0.0"
-        izz="0.0128227083333"/>
+        ixx="0.13091775" ixy="0.0" ixz="0.0"
+        iyy="0.00336333333333" iyz="0.0"
+        izz="0.128227083333"/>
     </inertial>
 	</link>
 
@@ -439,7 +439,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="200.0"/>
+                <kp value="20.0"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -454,9 +454,9 @@
     <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
     <mass value="1.009"/>
       <inertia
-        ixx="0.013091775" ixy="0.0" ixz="0.0"
-        iyy="0.000336333333333" iyz="0.0"
-        izz="0.0128227083333"/>
+        ixx="0.13091775" ixy="0.0" ixz="0.0"
+        iyy="0.00336333333333" iyz="0.0"
+        izz="0.128227083333"/>
     </inertial>
 	</link>
 
@@ -475,7 +475,7 @@
             <ode>
                 <mu1 value="2000.0"/>
                 <mu2 value="1000.0"/>
-                <kp value="200.0"/>
+                <kp value="20.0"/>
                 <kd value="600.0"/>
             </ode>
         </friction>
@@ -490,9 +490,9 @@
     <origin xyz = "0.0 0.195 0.0" rpy = "1.5708 0 0"/>
     <mass value="1.009"/>
       <inertia
-        ixx="0.013091775" ixy="0.0" ixz="0.0"
-        iyy="0.000336333333333" iyz="0.0"
-        izz="0.0128227083333"/>
+        ixx="0.13091775" ixy="0.0" ixz="0.0"
+        iyy="0.00336333333333" iyz="0.0"
+        izz="0.128227083333"/>
     </inertial>
 
 	</link>
@@ -510,10 +510,10 @@
         <surface>
             <friction>
             <ode>
-                <mu1 value="3000.0"/>
-                <mu2 value="1500.0"/>
-                <kp value="2000"/>
-                <kd value="200.0"/>
+                <mu1 value="2.0"/>
+                <mu2 value="1.0"/>
+                <kp value="0.1/>
+                <kd value="2.0"/>
             </ode>
         </friction>
       </surface>
@@ -524,11 +524,11 @@
         </collision>
     <inertial>
     <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
-    <mass value="0.0"/>
+    <mass value="0.01"/>
           <inertia
-        ixx="0.0000001" ixy="0.0" ixz="0.0"
-        iyy="0.0000001" iyz="0.0"
-        izz="0.0000001"/>
+        ixx="0.001" ixy="0.0" ixz="0.0"
+        iyy="0.001" iyz="0.0"
+        izz="0.001"/>
     </inertial>
     </link>
 
@@ -544,10 +544,10 @@
         <surface>
             <friction>
             <ode>
-                <mu1 value="3000.0"/>
-                <mu2 value="1500.0"/>
-                <kp value="2000"/>
-                <kd value="200.0"/>
+                <mu1 value="2.0"/>
+                <mu2 value="1.0"/>
+                <kp value="0.1"/>
+                <kd value="2.0"/>
             </ode>
         </friction>
       </surface>
@@ -559,11 +559,11 @@
         </collision>
     <inertial>
     <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
-    <mass value="0.0"/>
+    <mass value="0.01"/>
           <inertia
-        ixx="0.0000001" ixy="0.0" ixz="0.0"
-        iyy="0.0000001" iyz="0.0"
-        izz="0.0000001"/>
+        ixx="0.001" ixy="0.0" ixz="0.0"
+        iyy="0.001" iyz="0.0"
+        izz="0.001"/>
     </inertial>
     </link>
 
@@ -579,9 +579,9 @@
          <surface>
             <friction>
             <ode>
-                <mu1 value="3000.0"/>
-                <mu2 value="1500.0"/>
-                <kp value="2000"/>
+                <mu1 value="2.0"/>
+                <mu2 value="1.0"/>
+                <kp value="0.1"/>
                 <kd value="200.0"/>
             </ode>
         </friction>
@@ -594,11 +594,11 @@
         </collision>
     <inertial>
     <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
-    <mass value="0.0"/>
+    <mass value="0.01"/>
           <inertia
-        ixx="0.0000001" ixy="0.0" ixz="0.0"
-        iyy="0.0000001" iyz="0.0"
-        izz="0.0000001"/>
+        ixx="0.001" ixy="0.0" ixz="0.0"
+        iyy="0.001" iyz="0.0"
+        izz="0.001"/>
     </inertial>
     </link>
 
@@ -614,10 +614,10 @@
          <surface>
             <friction>
             <ode>
-                <mu1 value="3000.0"/>
-                <mu2 value="1500.0"/>
-                <kp value="2000"/>
-                <kd value="200.0"/>
+                <mu1 value="2.0"/>
+                <mu2 value="1.0"/>
+                <kp value="0.1"/>
+                <kd value="20.0"/>
             </ode>
         </friction>
       </surface>
@@ -629,11 +629,11 @@
         </collision>
     <inertial>
     <origin xyz = "0.0 0.0 0.0" rpy = "0 0 0"/>
-    <mass value="0.0"/>
+    <mass value="0.01"/>
           <inertia
-        ixx="0.0000001" ixy="0.0" ixz="0.0"
-        iyy="0.0000001" iyz="0.0"
-        izz="0.0000001"/>
+        ixx="0.001" ixy="0.0" ixz="0.0"
+        iyy="0.001" iyz="0.0"
+        izz="0.001"/>
     </inertial>
     </link>
 
