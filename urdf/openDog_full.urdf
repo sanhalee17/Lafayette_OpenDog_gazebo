@@ -512,7 +512,7 @@
             <ode>
                 <mu1 value="2.0"/>
                 <mu2 value="1.0"/>
-                <kp value="0.1/>
+                <kp value="0.1"/>
                 <kd value="2.0"/>
             </ode>
         </friction>
