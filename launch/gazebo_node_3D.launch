@@ -7,12 +7,12 @@
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_1">
         <param name = "phase_shift" value = '0'/>
         <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_center" value = '4'/>
-        <param name = "x_stride" value = '4'/>
-        <param name = "y_center" value = '-1'/>
+        <param name = "x_center" value = '0.1'/>
+        <param name = "x_stride" value = '0.1'/>
+        <param name = "y_center" value = '-0.025'/>
         <param name = "y_offset" value = '0'/>
-        <param name = "z_center" value = '-22'/>
-        <param name = "z_lift" value = '3.5'/>
+        <param name = "z_center" value = '-0.56'/>
+        <param name = "z_lift" value = '0.09'/>
         <param name = "femur_angle" value = "/theta_f_1"/>
         <param name = "tibia_angle" value = "/theta_t_1"/>
         <param name = "hip_angle" value = "/theta_h_1"/>
@@ -24,12 +24,12 @@
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_2">
         <param name = "phase_shift" value = '3.1415926'/>
         <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_center" value = '4'/>
-        <param name = "x_stride" value = '4'/>
-        <param name = "y_center" value = '-1'/>
+        <param name = "x_center" value = '0.1'/>
+        <param name = "x_stride" value = '0.1'/>
+        <param name = "y_center" value = '-0.025'/>
         <param name = "y_offset" value = '0'/>
-        <param name = "z_center" value = '-22'/>
-        <param name = "z_lift" value = '3.5'/>
+        <param name = "z_center" value = '-0.56'/>
+        <param name = "z_lift" value = '0.09'/>
         <param name = "femur_angle" value = "/theta_f_2"/>
         <param name = "tibia_angle" value = "/theta_t_2"/>
         <param name = "hip_angle" value = "/theta_h_2"/>
@@ -41,12 +41,12 @@
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_3">
         <param name = "phase_shift" value = '3.1415926'/>
         <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_center" value = '4'/>
-        <param name = "x_stride" value = '4'/>
-        <param name = "y_center" value = '-1'/>
+        <param name = "x_center" value = '0.1'/>
+        <param name = "x_stride" value = '0.1'/>
+        <param name = "y_center" value = '-0.025'/>
         <param name = "y_offset" value = '0'/>
-        <param name = "z_center" value = '-22'/>
-        <param name = "z_lift" value = '3.5'/>
+        <param name = "z_center" value = '-0.56'/>
+        <param name = "z_lift" value = '0.09'/>
         <param name = "femur_angle" value = "/theta_f_3"/>
         <param name = "tibia_angle" value = "/theta_t_3"/>
         <param name = "hip_angle" value = "/theta_h_3"/>
@@ -58,12 +58,12 @@
     <node pkg="openDog_description" type="3D_inverse_kinematics.py" name="inverse_kinematics_4">
         <param name = "phase_shift" value = '0'/> 
         <param name = "leg_pace" value = '3.5'/>
-        <param name = "x_center" value = '4'/>
-        <param name = "x_stride" value = '4'/>
-        <param name = "y_center" value = '-1'/>
+        <param name = "x_center" value = '0.1'/>
+        <param name = "x_stride" value = '0.1'/>
+        <param name = "y_center" value = '-0.025'/>
         <param name = "y_offset" value = '0'/>
-        <param name = "z_center" value = '-22'/>
-        <param name = "z_lift" value = '3.5'/>
+        <param name = "z_center" value = '-0.56'/>
+        <param name = "z_lift" value = '0.09'/>
         <param name = "femur_angle" value = "/theta_f_4"/>
         <param name = "tibia_angle" value = "/theta_t_4"/>
         <param name = "hip_angle" value = "/theta_h_4"/>
