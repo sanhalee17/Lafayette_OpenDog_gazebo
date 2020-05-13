@@ -77,7 +77,7 @@ class inverse_kinematics():
         As = Adxy - arccos(self.ls/dxy)
 
         if (leg == 1 or leg == 3):
-            As = pi-As
+            As = As
 
             if (x<0):
                 Ad = pi + arctan((z+self.ls*sin(As))/x)
@@ -90,8 +90,8 @@ class inverse_kinematics():
             Af = Ad - arccos((self.lf**2 + d**2 - self.lt**2)/(2*self.lf*d))
             At = pi - arccos((self.lf**2 + self.lt**2 - d**2)/(2*self.lf*self.lt))
 
-            Af = pi-Af
-            At = -At
+            Af = Af
+            At = At
 
         else:
             if (x<0):
