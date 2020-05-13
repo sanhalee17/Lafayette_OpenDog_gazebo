@@ -92,7 +92,7 @@ class inverse_kinematics():
             Af = Ad - arccos((self.lf**2 + d**2 - self.lt**2)/(2*self.lf*d))
             At = pi - arccos((self.lf**2 + self.lt**2 - d**2)/(2*self.lf*self.lt))
 
-            Af = Af
+            Af = pi + Af
             At = At
 
         else:
