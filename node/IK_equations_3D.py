@@ -76,6 +76,8 @@ class inverse_kinematics():
         dxy = sqrt(y**2 + z**2)
         As = Adxy - arccos(self.ls/dxy)
 
+        
+
         if (leg == 1 or leg == 3):
             As = As
 
