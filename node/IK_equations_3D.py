@@ -96,6 +96,8 @@ class inverse_kinematics():
         else:
             if (x<0):
                 Ad = arctan((z+self.ls*sin(As))/x)
+            elif (x==0):
+                Ad = pi/2
             else:
                 Ad = pi + arctan((z+self.ls*sin(As))/x)
 
