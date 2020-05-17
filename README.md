@@ -14,3 +14,4 @@
 			-The syntax will be 
 				roslaunch openDog_description gazebo_node.launch 
 				or roslaunch openDog_description gazebo_node_3D.launch
+**bold**
