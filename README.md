@@ -23,13 +23,20 @@
 
 3. **node** stores necessary nodes for running the gait pattern.
 	-new_foot_path.py generates perodic foot path wave
+	
 	-2D_inverse_kinematics.py calculates angle
+	
 	-gazebo_joint.py sends the angle to the Gazebo
+	
 	-For 3D gait, 3D tags are added in file names.
+	
 	-marker.py is for debugging footpath. visualize this in rviz. ```rviz```
 
 4. **urdf** stores geometry files of openDog. d
 	-```openDog_full.urdf``` is 2D model
+	
 	-```openDog_full_whip.urdf``` is 3D model
+	
 	-visualize those by using launch file ```urdf_visualize.launch```
+	
 	-change corresponding file name within the launch file. 
