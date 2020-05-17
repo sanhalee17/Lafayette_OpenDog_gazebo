@@ -1,6 +1,7 @@
 # Lafayette_OpenDog_gazebo
 -This repository stores Lafayette_openDog yaml, urdf and launch files for Gazebo simulation. 
--Package name is 'openDog_description'
+
+-Package name is ```openDog_description```
 
 # Directory / File / Command Explanation
 1. __Config__ stores controller gains. Adjust those if necessary
